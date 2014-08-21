@@ -1,2 +1,4 @@
-zenti-frontend
+ng-boilerplate
 ==============
+
+go go go!

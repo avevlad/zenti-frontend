@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="zenti">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title ng-bind="title">Main</title>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="navbar navbar-default" ng-controller="NavController">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/#/">ng test</a>
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li ng-class="getClass('/')"><a href="/#/">Home</a></li>
+            <li ng-class="getClass('/contact')"><a href="/#/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div ng-view></div>
+</div>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/angular-classy/angular-classy.min.js"></script>
+<script src="vendor/angular-route/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src="bundle/main/controller/NavController.js"></script>
+<script src="bundle/main/controller/MainController.js"></script>
+<script src="bundle/main/controller/NewsController.js"></script>
+<script src="bundle/contact/controller/ContactController.js"></script>
+</body>
+</html>
