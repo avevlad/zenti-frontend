@@ -5,7 +5,7 @@ out = 'public'
 
 coffeeSrc = [src + '/*.coffee', src + '/**/*.coffee', src + '/**/**/*.coffee']
 ejsSrc = [src + '/*.ejs', src + '/**/*.ejs', src + '/**/**/*.ejs']
-compassSrc = [src + '/sass/*.sass', src + '/sass/**/*.sass']
+compassSrc = [src + '/css/*.sass', src + '/css/**/*.sass']
 
 gulp.task 'coffee', ->
   gulp
@@ -28,7 +28,7 @@ gulp.task 'compass', ->
       style: 'expanded'
       environment: 'production'
       css: out + '/css'
-      sass: src + '/sass'
+      sass: src + '/css'
       image: out + '/images'
     )
     .pipe($.connect.reload())
