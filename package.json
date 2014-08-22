@@ -7,7 +7,12 @@
         "build": "bower install && gulp prod"
     },
     "author": "",
-    "license": "ISC",
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
     "devDependencies": {
         "coffee-script": "^1.7.1",
         "gulp": "^3.8.7",
