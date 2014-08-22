@@ -45,3 +45,4 @@ gulp.task 'watch', ->
   gulp.watch compassSrc, ['compass']
 
 gulp.task 'default', ['connect', 'coffee', 'ejs', 'compass', 'watch']
+gulp.task 'prod', ['coffee', 'ejs', 'compass']
