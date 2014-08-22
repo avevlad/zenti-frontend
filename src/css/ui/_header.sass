@@ -1,5 +1,6 @@
 .header
-  display: block
+  display: inline-block
+  float: left
   width: 100%
   height: $header-height
   margin-bottom: 10px
@@ -8,3 +9,37 @@
   margin-left: $menu-width
   position: fixed
   z-index: 6
+  .left
+    color: #ffffff
+    float: right
+    li
+      vertical-align: top
+      display: inline-block
+  .notice
+    display: inline-block
+    height: $header-height
+    width: 60px
+    font-size: 22px
+    padding-top: 12px
+    text-align: center
+    &:hover
+      cursor: pointer
+      background: rgba(255, 255, 255, 0.2)
+  .profile
+    display: inline-block
+    height: $header-height
+    padding-top: 17px
+    cursor: pointer
+    padding-left: 10px
+    padding-right: 15px
+    &:hover
+      background: rgba(255, 255, 255, 0.2)
+    .login
+      font-size: 16px
+      display: inline-block
+    .fa
+      position: relative
+      left: 5px
+      top: 1px
+      font-size: 18px
+      display: inline-block
