@@ -3,43 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <title ng-bind="title">Main</title>
 </head>
 <body>
-<section class="main-container">
+<section class="main-container" ng-controller="NavController">
     <aside class="menu">
-        <header class="name">
-            123
-        </header>
-        menu
+        <header class="name">Zenti panel</header>
+        <br/>
+        <ul class="nav">
+            <li class="activ1e" ng-class="getClass('/')"><a href="/"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+            <li ng-class="getClass('/contact')"><a href="/contact"><i class="fa fa-bar-chart-o"></i> Stats</a></li>
+            <li ng-class="getClass('/s')"><a href="/"><i class="fa fa-life-ring"></i> Cron</a></li>
+            <li ng-class="getClass('/a')"><a href="/"><i class="fa fa-align-left"></i> Logs</a></li>
+            <li ng-class="getClass('/sada')"><a href="/"><i class="fa fa-users"></i> Users</a></li>
+            <li ng-class="getClass('/as')"><a href="/"><i class="fa fa-cog"></i> Setting</a></li>
+            <li ng-class="getClass('/as')"><a href="/"><i class="fa fa-arrow-right"></i> More</a></li>
+        </ul>
     </aside>
-    <div class="header-bg"></div>
     <header class="header">
-        123
+
     </header>
     <section class="content">
         <div class="content-box">
-
+            <!--<div ng-view></div>-->
         </div>
     </section>
 </section>
-<!--
-<div class="wrapper">
-    <nav class="navbar navbar-default" ng-controller="NavController">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/#/">ng test</a>
-        </div>
-
-        <ul class="nav navbar-nav">
-            <li ng-class="getClass('/')"><a href="/#/">Home</a></li>
-            <li ng-class="getClass('/contact')"><a href="/#/contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div ng-view></div>
-</div>
-
--->
 
 
 <script src="vendor/jquery/jquery.min.js"></script>
