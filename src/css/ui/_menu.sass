@@ -17,17 +17,38 @@
     color: rgba(255, 255, 255, 0.8)
     height: $header-height
   .nav
+    position: relative
     .fa
-      color: #939393
+      color: #000000
       margin-right: 13px
       font-size: 16px
+      opacity: 0.3
     li
       border-bottom: 1px solid #e0e4e8
+      position: relative
       &.active
+        .fa
+          opacity: 1
         a
-          background: #eeeeee
-    a
-      padding: 10px 15px 10px 18px
-      &:hover
-        background: #eeeeee
+          background: none
+          &:hover
+            color: #428bca
+            cursor: default
+            background: none
+        .border
+          left: 0
+      a
+        padding: 10px 15px 10px 18px
+        &:hover
+          background: rgba(238, 238, 238, 0.5)
+      .border
+        transition: all 0.15s
+        display: block
+        position: absolute
+        width: 4px
+        background: #9f9f9f
+        height: 40px
+        top: 0
+        left: -4px
+        z-index: 6
 
