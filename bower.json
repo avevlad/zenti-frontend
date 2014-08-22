@@ -16,6 +16,7 @@
     "angular-classy": "*",
     "bootstrap": "~3.2.0",
     "jquery": "1.10.0",
-    "fontawesome": "~4.1.0"
+    "fontawesome": "~4.1.0",
+    "flexboxgrid": "~4.0.0"
   }
 }
