@@ -2,5 +2,6 @@
 *.sass-cache
 npm-debug.log
 node_modules
-public
+public/*
+!public/resource
 Thumbs.db
