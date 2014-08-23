@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css"/>
-    <!--<link rel="stylesheet" href="vendor/flexboxgrid/css/flexboxgrid.css"/>-->
+    <link rel="stylesheet" href="vendor/bootswatch/paper/bootstrap.min.css"/>
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <title ng-bind="title">Main</title>
@@ -11,7 +11,7 @@
 <body>
 <section class="main-container" ng-controller="NavController">
     <aside class="menu">
-        <header class="name">Zenti panel</header>
+        <a href="/" class="name">Zenti panel</a>
         <br/>
         <ul class="nav">
             <li ng-class="getClass('/')">
@@ -20,7 +20,7 @@
             </li>
             <li ng-class="getClass('/contact')">
                 <span class="border"></span>
-                <a href="/contact"><i class="fa fa-bar-chart-o"></i> Stats</a>
+                <a href="/contact"><i class="fa fa-bar-chart-o"></i>Stats</a>
             </li>
             <li ng-class="getClass('/s')">
                 <span class="border"></span>
@@ -28,19 +28,19 @@
             </li>
             <li ng-class="getClass('/a')">
                 <span class="border"></span>
-                <a href="/"><i class="fa fa-align-left"></i> Logs</a>
+                <a href="/"><i class="fa fa-align-left"></i>Logs</a>
             </li>
             <li ng-class="getClass('/sada')">
                 <span class="border"></span>
-                <a href="/"><i class="fa fa-users"></i> Users</a>
+                <a href="/"><i class="fa fa-users"></i>Users</a>
             </li>
             <li ng-class="getClass('/as')">
                 <span class="border"></span>
-                <a href="/"><i class="fa fa-cog"></i> Setting</a>
+                <a href="/"><i class="fa fa-cog"></i>Setting</a>
             </li>
             <li ng-class="getClass('/as')">
                 <span class="border"></span>
-                <a href="/"><i class="fa fa-arrow-right"></i> More</a>
+                <a href="/"><i class="fa fa-arrow-right"></i>More</a>
             </li>
         </ul>
 
@@ -85,8 +85,7 @@
 <script src="js/ui.js"></script>
 <script src="app.js"></script>
 <script src="bundle/main/controller/NavController.js"></script>
-<script src="bundle/main/controller/MainController.js"></script>
-<script src="bundle/main/controller/NewsController.js"></script>
+<script src="bundle/dashboard/controller/DashboardController.js"></script>
 <script src="bundle/contact/controller/ContactController.js"></script>
 </body>
 </html>
