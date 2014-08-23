@@ -15,6 +15,12 @@
     li
       vertical-align: top
       display: inline-block
+      & > div
+        &:hover
+          cursor: pointer
+          background: rgba(255, 255, 255, 0.2)
+        &:active
+          background: rgba(255, 255, 255, 0.3)
   .notice
     display: inline-block
     height: $header-height
@@ -23,9 +29,6 @@
     padding-top: 5px
     text-align: center
     transition: all 0.15s
-    &:hover
-      cursor: pointer
-      background: rgba(255, 255, 255, 0.2)
   .profile
     display: inline-block
     height: $header-height
@@ -34,8 +37,6 @@
     padding-left: 10px
     padding-right: 15px
     transition: all 0.15s
-    &:hover
-      background: rgba(255, 255, 255, 0.2)
     .login
       font-size: 16px
       display: inline-block
