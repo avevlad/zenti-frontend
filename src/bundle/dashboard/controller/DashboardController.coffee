@@ -9,12 +9,11 @@ zenti.classy.controller
     @time()
 
   time: ->
-    self = @
-    updateTimeDisplay = ->
+    updateTimeDisplay = =>
       newTime = moment().format('D MMM YYYY hh:mm:ss')
-      return if self.$scope.$$phase
-      self.$scope.$apply ->
-        self.$scope.serverTime = newTime
+      return if @.$scope.$$phase
+      @.$scope.$apply =>
+        @.$scope.serverTime = newTime
     do updateTimeDisplay
     setInterval updateTimeDisplay, 1000
     return
