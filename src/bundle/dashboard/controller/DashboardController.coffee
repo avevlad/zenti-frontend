@@ -2,19 +2,20 @@ zenti.classy.controller
   name: 'DashboardController'
   inject: ['$scope', '$location', '$rootScope']
   init: ->
-    console.log "Dashboard init"
+    moment.locale('ru')
     @$rootScope.title = "Dashboard"
     @$scope.distribName = "Ubuntu 14.04.1 LTS"
-    @$scope.serverTime = ""
+    @$scope.serverTime = moment().format('D MMM YYYY hh:mm:ss')
     @time()
 
   time: ->
     self = @
     updateTimeDisplay = ->
-      moment.locale('ru')
       newTime = moment().format('D MMM YYYY hh:mm:ss')
+      return if self.$scope.$$phase
       self.$scope.$apply ->
         self.$scope.serverTime = newTime
-      setTimeout updateTimeDisplay, 1000
     do updateTimeDisplay
+    setInterval updateTimeDisplay, 1000
     return
+

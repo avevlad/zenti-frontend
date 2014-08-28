@@ -19,6 +19,7 @@
     "fontawesome": "~4.1.0",
     "flexboxgrid": "~4.0.0",
     "bootswatch": "*",
-    "momentjs": "~2.8.2"
+    "momentjs": "~2.8.2",
+    "d3": "~3.4.11"
   }
 }
