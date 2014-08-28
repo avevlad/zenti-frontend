@@ -30,7 +30,38 @@
 .box-title
   font-size: 16px
 
-.line
-  fill: rgba(15, 139, 205, 0.15)
-  stroke: #0f8bcd
-  stroke-width: 2px
+.realtimeChart
+  display: block
+  overflow: hidden
+  height: 170px
+  position: relative
+  .y-all
+    display: block
+    position: relative
+    top: 8px
+  .y-item
+    position: absolute
+  .y-number
+    color: rgba(0, 0, 0, 0.5)
+    width: 20px
+    text-align: right
+    top: -8px
+    right: 2px
+    position: relative
+  .y-line
+    width: 300px
+    //position: absolute
+    position: relative
+    top: -19px
+    left: 25px
+    height: 1px
+    background: rgba(0, 0, 0, 0.06)
+  .svg
+    position: absolute
+    right: 0
+    bottom: 8px
+    z-index: 3
+  .line
+    fill: rgba(15, 139, 205, 0.15)
+    stroke: #0f8bcd
+    stroke-width: 1px

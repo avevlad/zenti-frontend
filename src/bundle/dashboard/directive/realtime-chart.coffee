@@ -4,7 +4,7 @@ zenti.directive "realtimeChart", () ->
     getRandomInt = (min, max) ->
       Math.floor(Math.random() * (max - min + 1)) + min
     n = 20
-    width = element.parents('.box-row').width()
+    width = element.parents('.box-row').width() - 25
     data = []
     for i in [0..n]
       data.push(0)
@@ -24,7 +24,8 @@ zenti.directive "realtimeChart", () ->
       .y1((d, i) ->
         y(d)
       )
-    svg = d3.select("." + attrs.class).append("svg")
+    svg = d3.select("." + attrs.name).append("svg")
+      .attr("class", "svg")
       .attr("width", width)
       .attr("height", height)
       .append("g")
@@ -35,9 +36,10 @@ zenti.directive "realtimeChart", () ->
       .datum(data)
       .attr("class", "line")
       .attr("d", line)
-
     tick = ->
-      randomInt = getRandomInt(10, 90)
+      pushValArr = [25, 50]
+      randomInt = pushValArr[getRandomInt(0, 1)]
+      console.log randomInt
       data.push randomInt
       path
         .attr("d", line)
@@ -49,8 +51,27 @@ zenti.directive "realtimeChart", () ->
         .each("end", tick)
       data.shift()
       return
-
     do tick
-
-
-    return
+    yValueArr = d3.range(100, -25, -25)
+    yLineNumber = 5
+    heightStep = height / yLineNumber
+    yLineHeightStep = 0
+    yAllElem = $('<div/>')
+    yAllElem.attr('class', "y-all")
+    for j in [0..yLineNumber]
+      yElem = $('<div/>')
+      yElem.attr('class', 'y-item')
+      yElem.css
+        top: yLineHeightStep
+      yLineHeightStep = yLineHeightStep + heightStep + 7
+      yNumberElem = $('<div/>')
+      yNumberElem.attr('class', 'y-number')
+      yNumberElem.html(yValueArr[j])
+      yLineElem = $('<div/>')
+      yLineElem.attr('class', 'y-line')
+      yLineElem.css
+        width: width
+      yElem.append(yNumberElem)
+      yElem.append(yLineElem)
+      yAllElem.append(yElem)
+    element.append(yAllElem)
