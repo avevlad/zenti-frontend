@@ -37,8 +37,7 @@ zenti.directive "realtimeChart", () ->
       .attr("class", "line")
       .attr("d", line)
     tick = ->
-      pushValArr = [25, 50]
-      randomInt = pushValArr[getRandomInt(0, 1)]
+      randomInt = getRandomInt(0, 75)
       console.log randomInt
       data.push randomInt
       path
