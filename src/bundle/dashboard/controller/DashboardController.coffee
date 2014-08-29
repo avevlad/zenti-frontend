@@ -4,9 +4,9 @@ zenti.classy.controller
   init: ->
     moment.locale('ru')
 
-    @$rootScope.title = "Dashboard"
-    
-    @$http.get("/api/server/1/").success (responce) =>
+    @$rootScope.title = 'Dashboard'
+
+    @$http.get('/api/server/1/').success (responce) =>
       if responce.success
         @$scope.distribName = responce.server.os.title
 
