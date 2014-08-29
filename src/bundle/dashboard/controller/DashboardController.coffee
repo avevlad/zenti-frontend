@@ -1,11 +1,18 @@
 zenti.classy.controller
   name: 'DashboardController'
-  inject: ['$scope', '$location', '$rootScope']
+  inject: ['$scope', '$location', '$rootScope', '$http']
   init: ->
     moment.locale('ru')
+
     @$rootScope.title = "Dashboard"
-    @$scope.distribName = "Ubuntu 14.04.1 LTS"
-    @$scope.serverTime = moment().format('D MMM YYYY hh:mm:ss')
+    
+    @$http.get("/api/server/1/").success (responce) =>
+      if responce.success
+        @$scope.distribName = responce.server.os.title
+
+        console.log responce
+
+
     @time()
 
   time: ->
