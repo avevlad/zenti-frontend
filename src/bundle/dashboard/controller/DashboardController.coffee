@@ -6,11 +6,11 @@ zenti.classy.controller
 
     @$rootScope.title = 'Dashboard'
 
-    @$http.get('/api/server/1/').success (responce) =>
-      if responce.success
-        @$scope.distribName = responce.server.os.title
+    @$http.get('/api/server/1/').success (response) =>
+      if response.success
+        @$scope.distribName = response.server.os.title
 
-        console.log responce
+        console.log response
 
 
     @time()
